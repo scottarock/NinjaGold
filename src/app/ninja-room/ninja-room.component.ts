@@ -20,7 +20,7 @@ export class NinjaRoomComponent implements OnInit {
   }
 
   earnGold() {
-    this._goldService.addGold(this.room.randomGold());
+    this._goldService.addGold(this.room.name, this.room.randomGold());
     this.goldUpdated.emit();
   }
 

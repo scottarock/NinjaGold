@@ -8,9 +8,12 @@ import { GoldService } from '../gold.service';
 })
 export class NinjaLogComponent implements OnInit {
 
+  log: string[] = [];
+
   constructor(private _goldService: GoldService) { }
 
   ngOnInit() {
+    this.log = this._goldService.retrieveGoldLog();
   }
 
 }

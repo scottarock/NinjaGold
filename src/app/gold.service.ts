@@ -8,6 +8,7 @@ export class GoldService {
 
   gold: number = 0;
   rooms: Room[] = [];
+  goldLog: string[] = [];
 
   constructor() {
     this.rooms.push(new Room('Farm', 2, 5));
@@ -24,7 +25,20 @@ export class GoldService {
     return this.rooms
   }
 
-  addGold(amount: number): void {
+  retrieveGoldLog(): string[] {
+    return this.goldLog;
+  }
+
+  addGold(roomName: string, amount: number): void {
     this.gold += amount;
+    if ( amount < 0 ) {
+      this.goldLog.push(
+        `You've lost ${ -amount } gold at the ${ roomName }`
+      );
+    } else {
+      this.goldLog.push(
+        `You've earned ${ amount } gold at the ${ roomName }`
+      );
+    }
   }
 }
