@@ -1,0 +1,20 @@
+h3, p {
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 4px 8px;
+  font-size: 1em;
+  background-color: whitesmoke;
+  border: 1px solid darkgray;
+  border-radius: 2px;
+}
+
+.room {
+  display: inline-block;
+  width: 22%;
+  margin-right: 2%;
+  padding: 25px 0px;
+  text-align: center;
+  border: 1px solid darkgray;
+}
